@@ -56,8 +56,12 @@
       .container .row .col-12 {
         width: 100%; } }
 
+header {
+  background: #d3531a; }
+
 .for__scroll {
-  height: 1000px; }
+  height: 2000px;
+  background: #919191; }
 
 .header__main-nav__menu {
   display: none; }
@@ -128,6 +132,9 @@
   opacity: 0.7;
   background: #333333;
   letter-spacing: 0.03rem; }
+
+.nav-up {
+  height: -115px; }
 
 .header__responsive-menu {
   display: none;

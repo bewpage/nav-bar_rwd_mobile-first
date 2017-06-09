@@ -9,8 +9,14 @@ $menu-mobile-height: 80px;
 
 //********** for scroll div only ****
 
+header {
+  background: #d3531a;
+  //height: 1000px;
+}
+
 .for__scroll{
-  height: 1000px;
+  height: 2000px;
+  background: #919191;
 }
 
 
@@ -112,6 +118,16 @@ $menu-mobile-height: 80px;
     background: #333333;
     letter-spacing: 0.03rem;
   }
+}
+
+
+//test for menu unhide when scroll up
+
+.nav-up {
+  //z-index: 9999;
+  //position: fixed;
+  height: -115px;
+  //min-width: 1200px;
 }
 
 
