@@ -4,6 +4,8 @@ $mobile-size: 28.75em;  //460px
 $tablets-size: 40.5em;  //650px
 $pc-size: 1150px;  //1150px
 $test: 40.5em;
+$menu-nav-height: 115px;
+$menu-mobile-height: 80px;
 
 //********** for scroll div only ****
 
@@ -17,15 +19,6 @@ $test: 40.5em;
 //******* here everything for mobile size ****
 //******* menu **********
 
-.header__main-nav{
-  height: 115px;
-  color: $font-color;
-}
-
-//.header__main-nav__test {
-//  position: relative;
-//}
-
 
 
 
@@ -38,7 +31,7 @@ $test: 40.5em;
 }
 
 .header__main-nav{
-  height: 115px;
+  height: $menu-mobile-height;
   color: $font-color;
 }
 
@@ -46,7 +39,7 @@ $test: 40.5em;
 .b-nav-fix{
   z-index: 9999;
   background: #000;
-  height: 115px;
+  height: 95px;
   position: fixed;
   width: 100%;
   transition: all 1s ease;
@@ -59,7 +52,7 @@ $test: 40.5em;
 .f-nav-fix {
   z-index: 9999;
   position: fixed;
-  height: 115px;
+  height: 95px;
   min-width: 1200px;
 }
 
@@ -138,7 +131,7 @@ $test: 40.5em;
   width:100%;
   padding:5px 0px;
   position:absolute;
-  top:115px;
+  //top:$menu-mobile-height;
   right:0px;
   z-index:1;
   opacity:1;
@@ -147,11 +140,16 @@ $test: 40.5em;
   background:#2e2728;
 
   a {
-    color: black;
+    transition:all linear 0.15s;
+    color:#919191;
     padding: 12px 16px;
     text-decoration: none;
     display: block;
   }
+}
+.header__responsive-menu__menu li a:hover {
+  background:#3e3436;
+  color: #ffffff;
 }
 
 
@@ -159,16 +157,89 @@ $test: 40.5em;
 
 .toggle-nav {
   display: block;
-  margin-right: 1.2em;
-  float: right;
-  line-height: 115px;
-
-  a {
-    color: $font-color;
-    text-decoration: none;
-    font-size: 1.3em;
-  }
+  height: $menu-mobile-height;
 }
+
+#nav-icon1 {
+  float: right;
+  width: 60px;
+  height: 45px;
+  position: relative;
+  margin-right: 1.2em;
+  margin-top: 20px;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: .5s ease-in-out;
+  -moz-transition: .5s ease-in-out;
+  -o-transition: .5s ease-in-out;
+  transition: .5s ease-in-out;
+  cursor: pointer;
+
+   span {
+    display: block;
+    position: absolute;
+    height: 9px;
+    width: 100%;
+    background: #d3531a;
+    border-radius: 9px;
+    opacity: 1;
+    right: 0;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: .25s ease-in-out;
+    -moz-transition: .25s ease-in-out;
+    -o-transition: .25s ease-in-out;
+    transition: .25s ease-in-out;
+  }
+
+}
+
+
+#nav-icon1 span:nth-child(1) {
+  top: 0px;
+}
+
+#nav-icon1 span:nth-child(2) {
+  top: 18px;
+}
+
+#nav-icon1 span:nth-child(3) {
+  top: 36px;
+}
+
+#nav-icon1.open span:nth-child(1) {
+  top: 18px;
+  -webkit-transform: rotate(135deg);
+  -moz-transform: rotate(135deg);
+  -o-transform: rotate(135deg);
+  transform: rotate(135deg);
+}
+
+#nav-icon1.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+#nav-icon1.open span:nth-child(3) {
+  top: 18px;
+  -webkit-transform: rotate(-135deg);
+  -moz-transform: rotate(-135deg);
+  -o-transform: rotate(-135deg);
+  transform: rotate(-135deg);
+}
+
+
+
+.toggle-nav-click {
+  //border-radius: 5px;
+  background:#2e2728;
+  //width: $menu-mobile-height;
+}
+
 
 
 
@@ -177,30 +248,19 @@ $test: 40.5em;
   float: left;
   margin-left: 1.2em;
   width: 20%;
-  line-height: 115px;
+  line-height: $menu-mobile-height;
   font-size: 1.2em;
   overflow: hidden;
   //add scaling size for logo
 }
 
-//.header__main-nav__brand {
-//  width: auto;
-//  margin-left: 20px;
-//  line-height: 115px;
-//}
+
 
 //********   social icons  ********
 .header__social{
   display: none;
 }
 
-//.header__social{
-//  overflow: hidden;
-//  line-height: 115px;
-//  i{
-//    margin-right: 20px;
-//  }
-//}
 
 
 
@@ -212,7 +272,7 @@ $test: 40.5em;
 @media only screen and (min-width: $mobile-size) {
 //here everything bigger than mobile size
   body{
-    background: #A5A000;
+    //background: #A5A000;
   }
 
   .header__responsive-menu__menu{
@@ -226,34 +286,25 @@ $test: 40.5em;
 
 @media only screen and (min-width: $tablets-size) {
   body{
-    background: #A54200;
+    //background: #A54200;
   }
 
-  .header__main-nav__brand {
+  .toggle-nav {
+    line-height: $menu-nav-height;
+    }
+
+
+    .header__main-nav__brand {
     width: auto;
     margin-left: 20px;
-    line-height: 115px;
   }
-
-  //.toggle-nav {
-  //  margin-right: 20px;
-  //  display: block;
-  //  float: right;
-  //  line-height: 115px;
-  //
-  //  a {
-  //    color: $font-color;
-  //    text-decoration: none;
-  //    font-size: 1.3em;
-  //  }
-  //}
 
 }
 
 
 @media only screen and (min-width: 1150px) {
   body{
-    background: #2ca513;
+    //background: #2ca513;
   }
 
 
