@@ -1,4 +1,5 @@
-$font-color: #000000;
+$font-color-black: #000000;
+$font-color-white: #ffffff;
 $background: #ffff00;
 $mobile-size: 28.75em;  //460px
 $tablets-size: 40.5em;  //650px
@@ -6,11 +7,13 @@ $pc-size: 1150px;  //1150px
 $test: 40.5em;
 $menu-nav-height: 115px;
 $menu-mobile-height: 80px;
+$menu-nav-height: 80px;
 
 //********** for scroll div only ****
 
 header {
   background: #d3531a;
+  color: #ffffff;
   //height: 1000px;
 }
 
@@ -38,14 +41,14 @@ header {
 
 .header__main-nav{
   height: $menu-mobile-height;
-  color: $font-color;
+  color: $font-color-white;
 }
 
 //style for fix menu
 .b-nav-fix{
   z-index: 9999;
   background: #000;
-  height: 95px;
+  height: $menu-mobile-height;
   position: fixed;
   width: 100%;
   transition: all 1s ease;
@@ -56,9 +59,10 @@ header {
 }
 
 .f-nav-fix {
+  //color: #ffffff;
   z-index: 9999;
   position: fixed;
-  height: 95px;
+  height: $menu-mobile-height;
   min-width: 1200px;
 }
 
@@ -82,7 +86,7 @@ header {
       line-height: 115px;
       font-size: 16px;
       text-decoration: none;
-      color: $font-color;
+      color: $font-color-white;
     }
     //underline active link effect
     a:before {

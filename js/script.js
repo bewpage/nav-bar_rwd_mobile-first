@@ -2,6 +2,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
         var nav = $('.header__main-nav');
+        var bgNav = $('.header__menu-fix');
         var mobileNav = $('.toggle-nav');
         var dropDownMenu = $('.header__responsive-menu');
         var hamburgerAnimation = $('#nav-icon1');
@@ -35,8 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     function hasScrolled() {
         var st = $(this).scrollTop();
-        console.log('to jest st= ' + st);
-        console.log('to jest lastscrolltop= ' + lastScrollTop);
+        console.log('this is st= ' + st);
+        // console.log('this is lastscrolltop= ' + lastScrollTop);
 
 
         // Make sure they scroll more than delta
@@ -48,15 +49,23 @@ document.addEventListener("DOMContentLoaded", function() {
         if (st > lastScrollTop && st > navbarHeight){
             // Scroll Down
             $('nav').removeClass('f-nav-fix').addClass('nav-up');
-        } else {
-            // Scroll Up
-            if(st + $(window).height() < $(document).height()) {
+            bgNav.removeClass('b-nav-fix');
+
+            //scroll up
+        } else if ((st + $(window).height() < $(document).height())){
                 $('nav').removeClass('nav-up').addClass('f-nav-fix');
+                bgNav.addClass('b-nav-fix');
             }
-        }
 
         lastScrollTop = st;
+
+        //scroll position top
+        if (st === 0){
+            $('nav').removeClass('nav-up').removeClass('f-nav-fix').addClass('header__main-nav');
+            bgNav.removeClass('b-nav-fix');
+        }
     }
+
 
 
 });

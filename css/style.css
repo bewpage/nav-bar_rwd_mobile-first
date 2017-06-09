@@ -57,7 +57,8 @@
         width: 100%; } }
 
 header {
-  background: #d3531a; }
+  background: #d3531a;
+  color: #ffffff; }
 
 .for__scroll {
   height: 2000px;
@@ -68,12 +69,12 @@ header {
 
 .header__main-nav {
   height: 80px;
-  color: #000000; }
+  color: #ffffff; }
 
 .b-nav-fix {
   z-index: 9999;
   background: #000;
-  height: 95px;
+  height: 80px;
   position: fixed;
   width: 100%;
   transition: all 1s ease;
@@ -85,7 +86,7 @@ header {
 .f-nav-fix {
   z-index: 9999;
   position: fixed;
-  height: 95px;
+  height: 80px;
   min-width: 1200px; }
 
 .header__main-nav__menu li {
@@ -103,7 +104,7 @@ header {
     line-height: 115px;
     font-size: 16px;
     text-decoration: none;
-    color: #000000; }
+    color: #ffffff; }
   .header__main-nav__menu li a:before {
     content: "";
     position: absolute;
@@ -248,7 +249,7 @@ header {
     width: 15em; } }
 @media only screen and (min-width: 40.5em) {
   .toggle-nav {
-    line-height: 115px; }
+    line-height: 80px; }
 
   .header__main-nav__brand {
     width: auto;
