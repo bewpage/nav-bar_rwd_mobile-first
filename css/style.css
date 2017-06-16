@@ -255,6 +255,10 @@ header {
     width: auto;
     margin-left: 20px; } }
 @media only screen and (min-width: 1150px) {
+  .header__main-nav {
+    height: 115px;
+    color: #ffffff; }
+
   .header__main-nav__menu {
     display: block; }
 
@@ -271,7 +275,10 @@ header {
     overflow: hidden;
     line-height: 115px; }
     .header__social i {
-      margin-right: 20px; } }
+      margin-right: 20px; }
+
+  .b-nav-fix {
+    height: 115px; } }
 * {
   font-family: 'Open Sans', sans-serif; }
 

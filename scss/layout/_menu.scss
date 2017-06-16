@@ -5,9 +5,9 @@ $mobile-size: 28.75em;  //460px
 $tablets-size: 40.5em;  //650px
 $pc-size: 1150px;  //1150px
 $test: 40.5em;
-$menu-nav-height: 115px;
+$menu-pc-height: 115px;
+$menu-tablet-height: 80px;
 $menu-mobile-height: 80px;
-$menu-nav-height: 80px;
 
 //********** for scroll div only ****
 
@@ -311,7 +311,7 @@ header {
   }
 
   .toggle-nav {
-    line-height: $menu-nav-height;
+    line-height: $menu-tablet-height;
     }
 
 
@@ -323,11 +323,15 @@ header {
 }
 
 
-@media only screen and (min-width: 1150px) {
+@media only screen and (min-width: $pc-size) {
   body{
     //background: #2ca513;
   }
 
+  .header__main-nav{
+    height: $menu-pc-height;
+    color: $font-color-white;
+  }
 
   .header__main-nav__menu {
     display: block;
@@ -353,6 +357,11 @@ header {
       }
     }
 
+//  scroll down menu
+
+  .b-nav-fix{
+    height: $menu-pc-height;
+  }
 
 }
 
