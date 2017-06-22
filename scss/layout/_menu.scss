@@ -66,11 +66,20 @@ header {
   min-width: 1200px;
 }
 
+.f-nav-mobile-fix {
+  //color: #ffffff;
+  z-index: 9999;
+  position: fixed;
+  height: $menu-mobile-height;
+  //min-width: 1200px;
+}
+
 
 
 .header__main-nav__menu {
 
   li{
+    text-align: center;
     position: relative;
     display: inline-block;
     list-style-type: none;
@@ -130,7 +139,7 @@ header {
 .nav-up {
   //z-index: 9999;
   //position: fixed;
-  height: -115px;
+  //height: -115px;
   //min-width: 1200px;
 }
 
@@ -176,9 +185,11 @@ header {
 //******** burger menu *******
 
 .toggle-nav {
-  display: block;
+  //display: block;
   height: $menu-mobile-height;
 }
+
+
 
 #nav-icon1 {
   float: right;
