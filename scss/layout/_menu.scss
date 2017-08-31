@@ -1,6 +1,13 @@
+//colors
 $font-color-black: #000000;
 $font-color-white: #ffffff;
+
+//backgrounds colors
+$temp-bg-color: #919191;
 $background: #ffff00;
+$header-bg-color: #d3531a;
+
+//sizes
 $mobile-size: 28.75em;  //460px
 $tablets-size: 40.5em;  //650px
 $pc-size: 1150px;  //1150px
@@ -11,15 +18,15 @@ $menu-mobile-height: 80px;
 
 //********** for scroll div only ****
 
-header {
-  background: #d3531a;
-  color: #ffffff;
-  //height: 1000px;
+#section__header {
+  background: $header-bg-color;
+  color: $font-color-white;
 }
 
+//extra space class for scroll action
 .for__scroll{
   height: 2000px;
-  background: #919191;
+  background: $temp-bg-color;
 }
 
 
@@ -27,8 +34,11 @@ header {
 
 //******* here everything for mobile size ****
 //******* menu **********
-
-
+.header__mobil{
+  //border: 2px solid black;
+  height: $menu-mobile-height;
+  width: 99vw;
+}
 
 
 
@@ -134,15 +144,6 @@ header {
 }
 
 
-//test for menu unhide when scroll up
-
-.nav-up {
-  //z-index: 9999;
-  //position: fixed;
-  //height: -115px;
-  //min-width: 1200px;
-}
-
 
 //******** burger menu drop-down*******
 
@@ -160,8 +161,8 @@ header {
   width:100%;
   padding:5px 0px;
   position:absolute;
-  //top:$menu-mobile-height;
-  right:0px;
+  margin-top:$menu-mobile-height;
+  //right:0px;
   z-index:1;
   opacity:1;
   transition:opacity linear 0.15s;
@@ -184,15 +185,21 @@ header {
 
 //******** burger menu *******
 
+.header__mobil{
+  //display: flex;
+  //flex-direction: row;
+  //justify-content: flex-end;
+}
+
 .toggle-nav {
-  //display: block;
+  float: right;
   height: $menu-mobile-height;
 }
 
 
 
 #nav-icon1 {
-  float: right;
+  //float: right;
   width: 60px;
   height: 45px;
   position: relative;
@@ -303,13 +310,8 @@ header {
 
 @media only screen and (min-width: $mobile-size) {
 //here everything bigger than mobile size
-  body{
-    //background: #A5A000;
-  }
 
-  .header__responsive-menu__menu{
-    width: 15em;
-  }
+
 
 
 

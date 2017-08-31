@@ -56,13 +56,17 @@
       .container .row .col-12 {
         width: 100%; } }
 
-header {
+#section__header {
   background: #d3531a;
   color: #ffffff; }
 
 .for__scroll {
   height: 2000px;
   background: #919191; }
+
+.header__mobil {
+  height: 80px;
+  width: 99vw; }
 
 .header__main-nav__menu {
   display: none; }
@@ -151,7 +155,7 @@ header {
   width: 100%;
   padding: 5px 0px;
   position: absolute;
-  right: 0px;
+  margin-top: 80px;
   z-index: 1;
   opacity: 1;
   transition: opacity linear 0.15s;
@@ -169,10 +173,10 @@ header {
   color: #ffffff; }
 
 .toggle-nav {
+  float: right;
   height: 80px; }
 
 #nav-icon1 {
-  float: right;
   width: 60px;
   height: 45px;
   position: relative;
@@ -246,9 +250,6 @@ header {
 .header__social {
   display: none; }
 
-@media only screen and (min-width: 28.75em) {
-  .header__responsive-menu__menu {
-    width: 15em; } }
 @media only screen and (min-width: 40.5em) {
   .toggle-nav {
     line-height: 80px; }

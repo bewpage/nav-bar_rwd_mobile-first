@@ -8,6 +8,22 @@ document.addEventListener("DOMContentLoaded", function() {
         var hamburgerAnimation = $('#nav-icon1');
         var hamburgerNav = $('.nav-icon');
 
+
+
+//function to have current width of the browser window
+
+    function adjustWidth() {
+        var parentwidth = $(".test").width();
+        // console.log('szerokosc ' + parentwidth);
+        $(".header__mobil").width(parentwidth);
+    };
+
+    $(window).resize(
+        function() {
+            adjustWidth();
+        });
+
+//drop down menu
     mobileNav.on('click', function(e) {
         dropDownMenu.toggleClass('expand');
         mobileNav.toggleClass('toggle-nav-click');
@@ -54,12 +70,14 @@ document.addEventListener("DOMContentLoaded", function() {
             bgNav.removeClass('b-nav-fix');
             hamburgerNav.removeClass('b-nav-fix');
             hamburgerNav.removeClass('f-nav-mobile-fix');
+            dropDownMenu.removeClass('expand');
+            hamburgerAnimation.removeClass('open');
 
             //scroll up
         } else if ((st + $(window).height() < $(document).height())){
                 $('nav').removeClass('nav-up').addClass('f-nav-fix');
                 bgNav.addClass('b-nav-fix');
-                hamburgerAnimation.css('float', 'none');
+                //hamburgerAnimation.css('float', 'none');
                 // hamburgerAnimation.addClass('nav-icon-test');
                 hamburgerNav.addClass('f-nav-mobile-fix');
             }
@@ -73,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function() {
             hamburgerNav.removeClass('b-nav-fix');
             hamburgerNav.removeClass('f-nav-mobile-fix');
             hamburgerAnimation.attr('id','nav-icon1');
-            hamburgerAnimation.css('float', 'right');
+            //hamburgerAnimation.css('float', 'right');
 
             // hamburgerAnimation.removeClass('nav-icon-test');
         }
