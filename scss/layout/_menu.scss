@@ -4,11 +4,11 @@ $font-color-white: #ffffff;
 
 //backgrounds colors
 $temp-bg-color: #919191;
-$background: #ffff00;
+$temp-bg-color-01: #ffff00;
 $header-bg-color: #d3531a;
 
 //sizes
-$mobile-size: 28.75em;  //460px
+$mobile-size: 30.00em;  //480px
 $tablets-size: 40.5em;  //650px
 $pc-size: 1150px;  //1150px
 $test: 40.5em;
@@ -16,10 +16,9 @@ $menu-pc-height: 115px;
 $menu-tablet-height: 80px;
 $menu-mobile-height: 80px;
 
-//********** for scroll div only ****
+//********** this part for scroll div only ****
 
 #section__header {
-  background: $header-bg-color;
   color: $font-color-white;
 }
 
@@ -30,16 +29,10 @@ $menu-mobile-height: 80px;
 }
 
 
+//******** here start menu design *****
 //******** mobile-first menu design *****
-
 //******* here everything for mobile size ****
 //******* menu **********
-.header__mobil{
-  //border: 2px solid black;
-  height: $menu-mobile-height;
-  width: 99vw;
-}
-
 
 
 //********** menu style **********
@@ -54,10 +47,15 @@ $menu-mobile-height: 80px;
   color: $font-color-white;
 }
 
-//style for fix menu
+.header__mobile{
+  height: $menu-mobile-height;
+  width: 99vw;
+}
+
+// ****** style for fix menu *****
 .b-nav-fix{
   z-index: 9999;
-  background: #000;
+  background: $header-bg-color;
   height: $menu-mobile-height;
   position: fixed;
   width: 100%;
@@ -69,84 +67,14 @@ $menu-mobile-height: 80px;
 }
 
 .f-nav-fix {
-  //color: #ffffff;
   z-index: 9999;
   position: fixed;
   height: $menu-mobile-height;
   min-width: 1200px;
 }
 
-.f-nav-mobile-fix {
-  //color: #ffffff;
-  z-index: 9999;
-  position: fixed;
-  height: $menu-mobile-height;
-  //min-width: 1200px;
-}
-
-
-
-.header__main-nav__menu {
-
-  li{
-    text-align: center;
-    position: relative;
-    display: inline-block;
-    list-style-type: none;
-    width: 90px;
-    margin-left: 1.5em;
-    transition: all 1s ease;
-    -webkit-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-
-    a{
-      line-height: 115px;
-      font-size: 16px;
-      text-decoration: none;
-      color: $font-color-white;
-    }
-    //underline active link effect
-    a:before {
-      content: "";
-      position: absolute;
-      width: 90px;
-      height: 5px;
-      bottom: 0;
-      left: 0;
-      background-color: #11749e;
-      visibility: hidden;
-      transform: scaleX(0);
-      -webkit-transform: scaleX(0);
-      -moz-transform: scaleX(0);
-      -o-transform: scaleX(0);
-      -ms-transform: scaleX(0);
-      transition: all 0.3s ease-in-out 0s;
-      -webkit-transition: all 0.3s ease-in-out 0s;
-      -moz-transition: all 0.3s ease-in-out 0s;
-      -o-transition: all 0.3s ease-in-out 0s;
-      -ms-transition: all 0.3s ease-in-out 0s;
-    }
-    a:hover:before{
-      border-bottom: 5px solid #11749e;
-      visibility: visible;
-      transform: scaleX(1);
-      -webkit-transform: scaleX(1);
-    }
-  }
-
-  li:hover{
-    opacity: 0.7;
-    background: #333333;
-    letter-spacing: 0.03rem;
-  }
-}
-
-
 
 //******** burger menu drop-down*******
-
 
 .header__responsive-menu{
   display: none;
@@ -185,22 +113,13 @@ $menu-mobile-height: 80px;
 
 //******** burger menu *******
 
-.header__mobil{
-  //display: flex;
-  //flex-direction: row;
-  //justify-content: flex-end;
-}
-
 .toggle-nav {
   float: right;
   height: $menu-mobile-height;
 }
 
-
-
 #nav-icon1 {
-  //float: right;
-  width: 60px;
+  width: 50px;
   height: 45px;
   position: relative;
   margin-right: 1.2em;
@@ -218,11 +137,11 @@ $menu-mobile-height: 80px;
    span {
     display: block;
     position: absolute;
-    height: 9px;
+    height: 7px;
     width: 100%;
     //background: #d3531a;
     background: #ffffff;
-    border-radius: 9px;
+    border-radius: 7px;
     opacity: 1;
     right: 0;
     -webkit-transform: rotate(0deg);
@@ -243,15 +162,15 @@ $menu-mobile-height: 80px;
 }
 
 #nav-icon1 span:nth-child(2) {
-  top: 18px;
+  top: 15px;
 }
 
 #nav-icon1 span:nth-child(3) {
-  top: 36px;
+  top: 30px;
 }
 
 #nav-icon1.open span:nth-child(1) {
-  top: 18px;
+  top: 15px;
   -webkit-transform: rotate(135deg);
   -moz-transform: rotate(135deg);
   -o-transform: rotate(135deg);
@@ -264,19 +183,15 @@ $menu-mobile-height: 80px;
 }
 
 #nav-icon1.open span:nth-child(3) {
-  top: 18px;
+  top: 15px;
   -webkit-transform: rotate(-135deg);
   -moz-transform: rotate(-135deg);
   -o-transform: rotate(-135deg);
   transform: rotate(-135deg);
 }
 
-
-
 .toggle-nav-click {
-  //border-radius: 5px;
-  background:#2e2728;
-  //width: $menu-mobile-height;
+  //background: $header-bg-color;
 }
 
 
@@ -292,7 +207,6 @@ $menu-mobile-height: 80px;
   overflow: hidden;
   //add scaling size for logo
 }
-
 
 
 //********   social icons  ********
@@ -319,9 +233,7 @@ $menu-mobile-height: 80px;
 
 
 @media only screen and (min-width: $tablets-size) {
-  body{
-    //background: #A54200;
-  }
+
 
   .toggle-nav {
     line-height: $menu-tablet-height;
@@ -337,9 +249,6 @@ $menu-mobile-height: 80px;
 
 
 @media only screen and (min-width: $pc-size) {
-  body{
-    //background: #2ca513;
-  }
 
   .header__main-nav{
     height: $menu-pc-height;
@@ -369,6 +278,63 @@ $menu-mobile-height: 80px;
         margin-right: 20px;
       }
     }
+
+  .header__main-nav__menu {
+
+    li{
+      text-align: center;
+      position: relative;
+      display: inline-block;
+      list-style-type: none;
+      width: 90px;
+      margin-left: 1.5em;
+      transition: all 1s ease;
+      -webkit-transition: all 1s ease;
+      -ms-transition: all 1s ease;
+      -o-transition: all 1s ease;
+      -moz-transition: all 1s ease;
+
+      a{
+        line-height: 115px;
+        font-size: 16px;
+        text-decoration: none;
+        color: $font-color-white;
+      }
+      //underline active link effect
+      a:before {
+        content: "";
+        position: absolute;
+        width: 90px;
+        height: 5px;
+        bottom: 0;
+        left: 0;
+        background-color: #11749e;
+        visibility: hidden;
+        transform: scaleX(0);
+        -webkit-transform: scaleX(0);
+        -moz-transform: scaleX(0);
+        -o-transform: scaleX(0);
+        -ms-transform: scaleX(0);
+        transition: all 0.3s ease-in-out 0s;
+        -webkit-transition: all 0.3s ease-in-out 0s;
+        -moz-transition: all 0.3s ease-in-out 0s;
+        -o-transition: all 0.3s ease-in-out 0s;
+        -ms-transition: all 0.3s ease-in-out 0s;
+      }
+      a:hover:before{
+        border-bottom: 5px solid #11749e;
+        visibility: visible;
+        transform: scaleX(1);
+        -webkit-transform: scaleX(1);
+      }
+    }
+
+    li:hover{
+      opacity: 0.7;
+      background: #333333;
+      letter-spacing: 0.03rem;
+    }
+  }
 
 //  scroll down menu
 

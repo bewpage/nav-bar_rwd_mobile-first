@@ -31,9 +31,7 @@ document.addEventListener("DOMContentLoaded", function() {
         e.preventDefault();
     });
 
-
     // hide nav bar when scroll
-
     var didScroll;
     var lastScrollTop = 0;
     var delta = 5;
@@ -69,7 +67,6 @@ document.addEventListener("DOMContentLoaded", function() {
             $('nav').removeClass('f-nav-fix').addClass('nav-up');
             bgNav.removeClass('b-nav-fix');
             hamburgerNav.removeClass('b-nav-fix');
-            hamburgerNav.removeClass('f-nav-mobile-fix');
             dropDownMenu.removeClass('expand');
             hamburgerAnimation.removeClass('open');
 
@@ -77,9 +74,7 @@ document.addEventListener("DOMContentLoaded", function() {
         } else if ((st + $(window).height() < $(document).height())){
                 $('nav').removeClass('nav-up').addClass('f-nav-fix');
                 bgNav.addClass('b-nav-fix');
-                //hamburgerAnimation.css('float', 'none');
-                // hamburgerAnimation.addClass('nav-icon-test');
-                hamburgerNav.addClass('f-nav-mobile-fix');
+            $('.toggle-nav-click').css('background', '#d3531a'); //color for hamburger
             }
 
         lastScrollTop = st;
@@ -89,11 +84,8 @@ document.addEventListener("DOMContentLoaded", function() {
             $('nav').removeClass('nav-up').removeClass('f-nav-fix').addClass('header__main-nav');
             bgNav.removeClass('b-nav-fix');
             hamburgerNav.removeClass('b-nav-fix');
-            hamburgerNav.removeClass('f-nav-mobile-fix');
             hamburgerAnimation.attr('id','nav-icon1');
-            //hamburgerAnimation.css('float', 'right');
-
-            // hamburgerAnimation.removeClass('nav-icon-test');
+            $('.toggle-nav-click').css('background', 'none'); //bg color for hamburger
         }
     }
 

@@ -1,10 +1,27 @@
 //header section
+//setup background img according to break-points
 #section__header {
   background-image: url("../img/layer_96_opt_baufqf_c_scale,w_480.png");
+  height:325px;
   width: auto;
-  //height: 1082px;
+  margin: 0;
   background-size: cover;
   background-position: center;
 }
 
 
+//responsive design breakpoints
+
+@media only screen and (min-width: $mobile-size) {
+  //here everything bigger than mobile size 480px
+  #section__header {
+    background-image: url("../img/layer_96_opt_baufqf_c_scale,w_675.png");
+    height:457px;
+
+  }
+
+
+
+
+
+}
